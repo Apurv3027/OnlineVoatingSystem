@@ -1,7 +1,7 @@
 import "./Auth.css";
 import React, { useEffect } from "react";
 
-function LoginScreen() {
+function RegisterScreen() {
   useEffect(() => {
     let switchCtn = document.querySelector("#switch-cnt");
     let switchC1 = document.querySelector("#switch-c1");
@@ -52,33 +52,34 @@ function LoginScreen() {
   return (
     <div className="body">
       <div className="main">
-        <div class="switch" id="switch-cnt">
-          <div class="switch__circle"></div>
-          <div class="switch__circle switch__circle--t"></div>
-          <div class="switch__container" id="switch-c2">
-            <h2 class="switch__title title">Hello Friend !</h2>
-            <p class="switch__description description">
-              Enter your personal details and start journey with us
-            </p>
-            <button class="switch__button button switch-btn">SIGN UP</button>
-          </div>
-        </div>
-        <div className="container b-container" id="b-container">
-          <form className="form" id="b-form" method="" action="">
-            <h2 className="form_title title">Sign to Website</h2>
-            <span className="form__span">Use your email account</span>
+        <div className="container a-container" id="a-container">
+          <form className="form" id="a-form" method="" action="">
+            <h2 className="form_title title">Create Account</h2>
+            <span className="form__span">Use email for registration</span>
+            <input className="form__input" type="text" placeholder="Name" />
             <input className="form__input" type="text" placeholder="Email" />
             <input
               className="form__input"
               type="password"
               placeholder="Password"
             />
-            <button class="form__button button submit">SIGN IN</button>
+            <button className="form__button button submit">SIGN UP</button>
           </form>
+        </div>
+        <div class="switch" id="switch-cnt">
+          <div class="switch__circle"></div>
+          <div class="switch__circle switch__circle--t"></div>
+          <div class="switch__container" id="switch-c1">
+            <h2 class="switch__title title">Welcome Back !</h2>
+            <p class="switch__description description">
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="switch__button button switch-btn">SIGN IN</button>
+          </div>
         </div>
       </div>
     </div>
   );
 }
 
-export default LoginScreen;
+export default RegisterScreen;
